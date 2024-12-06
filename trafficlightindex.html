@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #hy{
+            color:black;
+            background-color: gainsboro;
+            margin-top: 100px;
+        }
+        #hy:hover{
+            color:gainsboro;
+            background-color: black;
+        }
+        #box{
+            height: 300px;
+            width: 300px;
+            background-color: grey;
+            box-shadow: 10px 10px 100px 20px grey;
+            border-radius: 50%;
+        }
+        .section{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <center><h1 id="hy">Traffic Light</h1></center>
+    <div class="section">
+
+        <div id="box" draggable="true" style="box-shadow: grey 5px 5px 50px 5px; background-color: grey;">
+            
+        </div>
+        
+            <script>
+                const sunLight=()=>{
+            let sun=document.getElementById('box')
+            let sunTwo=document.getElementsByClassName('sunTwo')[0]
+        
+            sun.addEventListener("mouseenter",()=>{
+            sun.style.boxShadow="10px 10px 100px 10px red";
+            sun.style.backgroundColor="red";
+            })
+            sun.addEventListener("mouseleave",()=>{
+            sun.style.boxShadow="10px 10px 100px 10px red";
+            sun.style.backgroundColor="red";
+            })
+        
+            sun.addEventListener("click",()=>{
+            sun.style.boxShadow="10px 10px 100px 10px yellow";
+            sun.style.backgroundColor="yellow";
+            })
+            
+            sun.addEventListener("dblclick",()=>{
+            sun.style.boxShadow="10px 10px 100px 10px green";
+            sun.style.backgroundColor="green";
+            })
+}
+        sunLight()
+        </Script>
+    
+</body>
+</html>
